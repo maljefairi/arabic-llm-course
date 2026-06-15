@@ -44,6 +44,6 @@
     <text x="1027" y="392" font-size="13" fill="#b79bff">ذاكرة KV: ◐ (أصغر + جودة أعلى)</text>
   </g>
 
-  <text x="1170" y="450" text-anchor="end" direction="rtl" font-size="14" fill="#cdd5e3">التوصية: استخدم <tspan fill="#b79bff" font-weight="700">MLA</tspan> (DeepSeek-V2/V3) إن أمكن تنفيذها، وإلا فـ <tspan fill="#7ee0a8" font-weight="700">GQA</tspan> كخط أساس آمن.</text>
-  <text x="1170" y="478" text-anchor="end" direction="rtl" font-size="13" fill="#9aa3b2">الضغط منخفض الرتبة يسمح للرؤوس باستخدام نفس المعلومة بطرق مختلفة، بخلاف إجبار GQA الرؤوس على التطابق.</text>
+  <text x="1170" y="450" text-anchor="start" direction="rtl" font-size="14" fill="#cdd5e3">التوصية: استخدم <tspan fill="#b79bff" font-weight="700">MLA</tspan> (DeepSeek-V2/V3) إن أمكن تنفيذها، وإلا فـ <tspan fill="#7ee0a8" font-weight="700">GQA</tspan> كخط أساس آمن.</text>
+  <text x="1170" y="478" text-anchor="start" direction="rtl" font-size="13" fill="#9aa3b2">الضغط منخفض الرتبة يسمح للرؤوس باستخدام نفس المعلومة بطرق مختلفة، بخلاف إجبار GQA الرؤوس على التطابق.</text>
 </svg>

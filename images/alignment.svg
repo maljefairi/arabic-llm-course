@@ -52,6 +52,6 @@
     <line x1="730" y1="320" x2="800" y2="254" stroke="#8b5cf6" stroke-width="1.6" marker-end="url(#al_a)"/>
   </g>
 
-  <text x="1060" y="420" text-anchor="end" direction="rtl" font-size="12.5" fill="#9aa3b2">بدائل/تطوّرات: RLAIF · IPO · KTO · ORPO · rejection sampling/best-of-n · Constitutional AI</text>
-  <text x="1060" y="446" text-anchor="end" direction="rtl" font-size="12.5" fill="#fbbf24">الاستدلال يبدأ في mid-training لا فقط ما بعد التدريب (OLMo 3-Think)</text>
+  <text x="1060" y="420" text-anchor="start" direction="rtl" font-size="12.5" fill="#9aa3b2">بدائل/تطوّرات: RLAIF · IPO · KTO · ORPO · rejection sampling/best-of-n · Constitutional AI</text>
+  <text x="1060" y="446" text-anchor="start" direction="rtl" font-size="12.5" fill="#fbbf24">الاستدلال يبدأ في mid-training لا فقط ما بعد التدريب (OLMo 3-Think)</text>
 </svg>

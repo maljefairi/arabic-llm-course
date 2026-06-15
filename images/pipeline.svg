@@ -66,8 +66,8 @@
   <!-- phase legend -->
   <g font-size="13" direction="rtl">
     <rect x="20" y="430" width="1146" height="100" rx="12" fill="#12151d" stroke="#2a2f3e"/>
-    <text x="1150" y="458" text-anchor="end" direction="rtl" font-size="15" font-weight="700" fill="#cdd5e3">المبدأ المحوري: حلقة المقارنة التجريبية (Ablation Loop)</text>
-    <text x="1150" y="486" text-anchor="end" direction="rtl" fill="#9aa3b2">غيّر شيئًا واحدًا ← درّب نموذجًا صغيرًا وكيلاً ← قِس على حزمة تقييم ثابتة ← احتفظ بالأفضل ← كرّر.</text>
-    <text x="1150" y="512" text-anchor="end" direction="rtl" fill="#9aa3b2">البيانات صارت الرافعة الأساسية للجودة — لا المعمارية. كل قرار يُثبَت تجريبيًا قبل التوسعة.</text>
+    <text x="1150" y="458" text-anchor="start" direction="rtl" font-size="15" font-weight="700" fill="#cdd5e3">المبدأ المحوري: حلقة المقارنة التجريبية (Ablation Loop)</text>
+    <text x="1150" y="486" text-anchor="start" direction="rtl" fill="#9aa3b2">غيّر شيئًا واحدًا ← درّب نموذجًا صغيرًا وكيلاً ← قِس على حزمة تقييم ثابتة ← احتفظ بالأفضل ← كرّر.</text>
+    <text x="1150" y="512" text-anchor="start" direction="rtl" fill="#9aa3b2">البيانات صارت الرافعة الأساسية للجودة — لا المعمارية. كل قرار يُثبَت تجريبيًا قبل التوسعة.</text>
   </g>
 </svg>

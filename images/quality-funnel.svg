@@ -25,6 +25,6 @@
   <text x="40" y="120" direction="rtl" font-size="12" fill="#7ee0a8">DCLM: 7B@2.6T → 64% MMLU</text>
   <text x="40" y="140" direction="rtl" font-size="11" fill="#9aa3b2">+6.6 نقطة بحساب أقل 40%</text>
 
-  <text x="960" y="430" text-anchor="end" direction="rtl" font-size="12.5" fill="#fbbf24">تحذيران: التصفية تزيل ~90% (تجوّع التشغيلات الطويلة) · «وهم الجودة» = محاذاة للمهمة لا جودة جوهرية</text>
-  <text x="960" y="452" text-anchor="end" direction="rtl" font-size="12" fill="#9aa3b2">الحل: تجميع مصنّفات (Nemotron-CC) + بيانات اصطناعية لاستعادة الرموز المفقودة</text>
+  <text x="960" y="430" text-anchor="start" direction="rtl" font-size="12.5" fill="#fbbf24">تحذيران: التصفية تزيل ~90% (تجوّع التشغيلات الطويلة) · «وهم الجودة» = محاذاة للمهمة لا جودة جوهرية</text>
+  <text x="960" y="452" text-anchor="start" direction="rtl" font-size="12" fill="#9aa3b2">الحل: تجميع مصنّفات (Nemotron-CC) + بيانات اصطناعية لاستعادة الرموز المفقودة</text>
 </svg>

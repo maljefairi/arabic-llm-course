@@ -42,11 +42,11 @@
 
   <!-- memory savings row -->
   <rect x="40" y="300" width="1020" height="160" rx="12" fill="#12151d" stroke="#2a2f3e"/>
-  <text x="1030" y="328" text-anchor="end" direction="rtl" font-size="15" font-weight="700" fill="#cdd5e3">توفير الذاكرة + الأدوات</text>
+  <text x="1030" y="328" text-anchor="start" direction="rtl" font-size="15" font-weight="700" fill="#cdd5e3">توفير الذاكرة + الأدوات</text>
   <g direction="rtl" font-size="12.5" fill="#cdd5e3">
-    <text x="1030" y="356" text-anchor="end">• إعادة حساب التنشيط (activation/gradient checkpointing) — مقايضة حساب مقابل ذاكرة</text>
-    <text x="1030" y="380" text-anchor="end">• الدقة المختلطة bf16/fp16/fp8 · تراكم التدرّج (gradient accumulation) · تفريغ المحسّن (offload)</text>
-    <text x="1030" y="404" text-anchor="end">• توازي الخبراء (EP) لـ MoE عبر توجيه all-to-all</text>
-    <text x="1030" y="428" text-anchor="end" fill="#7ee0a8">الأدوات: PyTorch FSDP · DeepSpeed · Megatron-LM — والهدف رفع معدّل استخدام النموذج (MFU)</text>
+    <text x="1030" y="356" text-anchor="start">• إعادة حساب التنشيط (activation/gradient checkpointing) — مقايضة حساب مقابل ذاكرة</text>
+    <text x="1030" y="380" text-anchor="start">• الدقة المختلطة bf16/fp16/fp8 · تراكم التدرّج (gradient accumulation) · تفريغ المحسّن (offload)</text>
+    <text x="1030" y="404" text-anchor="start">• توازي الخبراء (EP) لـ MoE عبر توجيه all-to-all</text>
+    <text x="1030" y="428" text-anchor="start" fill="#7ee0a8">الأدوات: PyTorch FSDP · DeepSpeed · Megatron-LM — والهدف رفع معدّل استخدام النموذج (MFU)</text>
   </g>
 </svg>

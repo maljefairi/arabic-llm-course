@@ -21,14 +21,14 @@
 
   <!-- right panel facts -->
   <rect x="660" y="110" width="300" height="300" rx="12" fill="#12151d" stroke="#2a2f3e"/>
-  <text x="940" y="140" text-anchor="end" direction="rtl" font-size="15" font-weight="700" fill="#7ee0a8">الحزمة الرابحة 2025</text>
-  <text x="940" y="172" text-anchor="end" direction="rtl" font-size="12.5" fill="#cdd5e3">★ Muon (+ weight decay + ضبط مقياس التحديث)</text>
-  <text x="940" y="200" text-anchor="end" direction="rtl" font-size="12.5" fill="#cdd5e3">★ μP: ضبط فرط-المعاملات على وكلاء صغار وانقلها</text>
-  <text x="940" y="228" text-anchor="end" direction="rtl" font-size="12.5" fill="#cdd5e3">★ FP8 mixed-precision (DeepSeek-V3)</text>
-  <text x="940" y="256" text-anchor="end" direction="rtl" font-size="12.5" fill="#cdd5e3">★ جدول WSD (استقرار طويل ثم انحلال)</text>
+  <text x="940" y="140" text-anchor="start" direction="rtl" font-size="15" font-weight="700" fill="#7ee0a8">الحزمة الرابحة 2025</text>
+  <text x="940" y="172" text-anchor="start" direction="rtl" font-size="12.5" fill="#cdd5e3">★ Muon (+ weight decay + ضبط مقياس التحديث)</text>
+  <text x="940" y="200" text-anchor="start" direction="rtl" font-size="12.5" fill="#cdd5e3">★ μP: ضبط فرط-المعاملات على وكلاء صغار وانقلها</text>
+  <text x="940" y="228" text-anchor="start" direction="rtl" font-size="12.5" fill="#cdd5e3">★ FP8 mixed-precision (DeepSeek-V3)</text>
+  <text x="940" y="256" text-anchor="start" direction="rtl" font-size="12.5" fill="#cdd5e3">★ جدول WSD (استقرار طويل ثم انحلال)</text>
   <line x1="680" y1="276" x2="940" y2="276" stroke="#2a2f3e"/>
-  <text x="940" y="302" text-anchor="end" direction="rtl" font-size="12" fill="#9aa3b2">تحقّق: Moonlight (3B/16B، 5.7T) · Kimi K2</text>
-  <text x="940" y="328" text-anchor="end" direction="rtl" font-size="12" fill="#fbbf24">المقايضة: 10–15 ضرب مصفوفات/خطوة (أبطأ قليلًا)</text>
-  <text x="940" y="356" text-anchor="end" direction="rtl" font-size="12" fill="#9aa3b2">قوانين القياس: Chinchilla ~20 رمز/معامل</text>
-  <text x="940" y="382" text-anchor="end" direction="rtl" font-size="12" fill="#9aa3b2">المقيّد بالبيانات: تكرار ≤4 حقب ≈ مجاني</text>
+  <text x="940" y="302" text-anchor="start" direction="rtl" font-size="12" fill="#9aa3b2">تحقّق: Moonlight (3B/16B، 5.7T) · Kimi K2</text>
+  <text x="940" y="328" text-anchor="start" direction="rtl" font-size="12" fill="#fbbf24">المقايضة: 10–15 ضرب مصفوفات/خطوة (أبطأ قليلًا)</text>
+  <text x="940" y="356" text-anchor="start" direction="rtl" font-size="12" fill="#9aa3b2">قوانين القياس: Chinchilla ~20 رمز/معامل</text>
+  <text x="940" y="382" text-anchor="start" direction="rtl" font-size="12" fill="#9aa3b2">المقيّد بالبيانات: تكرار ≤4 حقب ≈ مجاني</text>
 </svg>

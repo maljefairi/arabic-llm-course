@@ -49,8 +49,8 @@
   <rect x="410" y="502" width="180" height="44" rx="10" fill="#171a23" stroke="#2a2f3e"/>
   <text x="500" y="530" text-anchor="middle" direction="rtl" font-size="13" fill="#e7e9ee">جمع موزون → الخرج</text>
 
-  <text x="960" y="150" text-anchor="end" direction="rtl" font-size="13" fill="#cdd5e3">مثال DeepSeekMoE: 256 خبيرًا، يُفعَّل 8 لكل رمز</text>
-  <text x="960" y="174" text-anchor="end" direction="rtl" font-size="13" fill="#9aa3b2">671B إجمالي → 37B نشط فقط لكل رمز</text>
+  <text x="960" y="150" text-anchor="start" direction="rtl" font-size="13" fill="#cdd5e3">مثال DeepSeekMoE: 256 خبيرًا، يُفعَّل 8 لكل رمز</text>
+  <text x="960" y="174" text-anchor="start" direction="rtl" font-size="13" fill="#9aa3b2">671B إجمالي → 37B نشط فقط لكل رمز</text>
   <text x="40" y="150" direction="rtl" font-size="13" fill="#cdd5e3">موازنة بلا خسارة مساعدة</text>
   <text x="40" y="174" direction="rtl" font-size="12" fill="#9aa3b2">(auxiliary-loss-free)</text>
 </svg>

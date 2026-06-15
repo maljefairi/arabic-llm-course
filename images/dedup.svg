@@ -43,7 +43,7 @@
     <line x1="680" y1="180" x2="738" y2="200" stroke="#8b5cf6" stroke-width="1.8" marker-end="url(#d_a)"/>
   </g>
 
-  <text x="960" y="372" text-anchor="end" direction="rtl" font-size="13" fill="#cdd5e3">التدرّج: دقيق (exact) → MinHash/LSH → Bloom (فوق 10TB) → دلالي SemDeDup / D4</text>
-  <text x="960" y="400" text-anchor="end" direction="rtl" font-size="12.5" fill="#9aa3b2">لماذا حرج؟ يهدر الحساب · يشوّه التوزيع · يغذّي الحفظ (memorization)</text>
-  <text x="960" y="426" text-anchor="end" direction="rtl" font-size="12" fill="#fbbf24">فخ: الإزالة العدوانية عبر كل اللقطات قد تترك بقايا أقل جودة — أزِل لكل-لقطة أولًا.</text>
+  <text x="960" y="372" text-anchor="start" direction="rtl" font-size="13" fill="#cdd5e3">التدرّج: دقيق (exact) → MinHash/LSH → Bloom (فوق 10TB) → دلالي SemDeDup / D4</text>
+  <text x="960" y="400" text-anchor="start" direction="rtl" font-size="12.5" fill="#9aa3b2">لماذا حرج؟ يهدر الحساب · يشوّه التوزيع · يغذّي الحفظ (memorization)</text>
+  <text x="960" y="426" text-anchor="start" direction="rtl" font-size="12" fill="#fbbf24">فخ: الإزالة العدوانية عبر كل اللقطات قد تترك بقايا أقل جودة — أزِل لكل-لقطة أولًا.</text>
 </svg>
