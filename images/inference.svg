@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 490" font-family="'Segoe UI',Tahoma,'Noto Kufi Arabic','Cairo',sans-serif">
+  <defs><marker id="i_a" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#6ea8fe"/></marker></defs>
+  <rect width="1100" height="490" fill="#0f1117"/>
+  <text x="550" y="40" text-anchor="middle" direction="rtl" font-size="24" font-weight="700" fill="#fff">الاستدلال والنشر — تشغيل النموذج بكفاءة</text>
+  <text x="550" y="66" text-anchor="middle" font-size="13" fill="#9aa3b2">مرحلتان: تعبئة مسبقة (Prefill) ثم فك تشفير (Decode)</text>
+
+  <!-- prefill vs decode -->
+  <rect x="40" y="100" width="500" height="150" rx="12" fill="#12151d" stroke="#2a2f3e"/>
+  <text x="520" y="128" text-anchor="end" direction="rtl" font-size="14" font-weight="700" fill="#9fc1ff">Prefill مقابل Decode</text>
+  <rect x="70" y="145" width="200" height="80" rx="9" fill="#172033" stroke="#6ea8fe"/>
+  <text x="170" y="172" text-anchor="middle" direction="rtl" font-size="12.5" fill="#9fc1ff">Prefill</text>
+  <text x="170" y="194" text-anchor="middle" font-size="10.5" fill="#9aa3b2">كل الموجّه دفعة واحدة</text>
+  <text x="170" y="210" text-anchor="middle" font-size="10.5" fill="#9aa3b2">محدود بالحساب (compute)</text>
+  <rect x="300" y="145" width="220" height="80" rx="9" fill="#1a1726" stroke="#8b5cf6"/>
+  <text x="410" y="172" text-anchor="middle" direction="rtl" font-size="12.5" fill="#b79bff">Decode</text>
+  <text x="410" y="194" text-anchor="middle" font-size="10.5" fill="#9aa3b2">رمز تلو الآخر</text>
+  <text x="410" y="210" text-anchor="middle" font-size="10.5" fill="#fbbf24">محدود بعرض نطاق الذاكرة</text>
+
+  <!-- KV cache / paged -->
+  <rect x="560" y="100" width="500" height="150" rx="12" fill="#12151d" stroke="#34d399"/>
+  <text x="1040" y="128" text-anchor="end" direction="rtl" font-size="14" font-weight="700" fill="#7ee0a8">PagedAttention (vLLM)</text>
+  <g fill="#16261c" stroke="#34d399"><rect x="590" y="150" width="40" height="40" rx="5"/><rect x="636" y="150" width="40" height="40" rx="5"/><rect x="682" y="150" width="40" height="40" rx="5"/><rect x="728" y="150" width="40" height="40" rx="5"/></g>
+  <text x="675" y="210" text-anchor="middle" direction="rtl" font-size="11" fill="#9aa3b2">تقسيم الـ KV cache لصفحات كذاكرة افتراضية</text>
+  <text x="900" y="172" text-anchor="middle" direction="rtl" font-size="12" fill="#7ee0a8">+ تجميع مستمر</text>
+  <text x="900" y="190" text-anchor="middle" font-size="11" fill="#9aa3b2">(continuous batching)</text>
+  <text x="900" y="212" text-anchor="middle" direction="rtl" font-size="11" fill="#9aa3b2">يمنع التشظّي → إنتاجية أعلى</text>
+
+  <!-- speculative decoding -->
+  <rect x="40" y="270" width="500" height="150" rx="12" fill="#12151d" stroke="#fbbf24"/>
+  <text x="520" y="298" text-anchor="end" direction="rtl" font-size="14" font-weight="700" fill="#fbbf24">فك التشفير التخميني (Speculative)</text>
+  <rect x="70" y="318" width="170" height="46" rx="8" fill="#241f10" stroke="#fbbf24"/>
+  <text x="155" y="346" text-anchor="middle" direction="rtl" font-size="11.5" fill="#fbbf24">نموذج مسوّدة صغير يقترح</text>
+  <rect x="300" y="318" width="200" height="46" rx="8" fill="#172033" stroke="#6ea8fe"/>
+  <text x="400" y="346" text-anchor="middle" direction="rtl" font-size="11.5" fill="#9fc1ff">النموذج الكبير يتحقّق دفعة</text>
+  <line x1="240" y1="341" x2="298" y2="341" stroke="#fbbf24" stroke-width="2" marker-end="url(#i_a)"/>
+  <text x="520" y="396" text-anchor="end" direction="rtl" font-size="11" fill="#9aa3b2">يُسرّع التوليد · يرتبط برأس MTP (الفصل 6)</text>
+
+  <!-- quantization -->
+  <rect x="560" y="270" width="500" height="150" rx="12" fill="#12151d" stroke="#8b5cf6"/>
+  <text x="1040" y="298" text-anchor="end" direction="rtl" font-size="14" font-weight="700" fill="#b79bff">التكميم (Quantization)</text>
+  <g text-anchor="middle" font-size="12">
+    <rect x="590" y="318" width="90" height="44" rx="7" fill="#1a1726" stroke="#8b5cf6"/><text x="635" y="345" fill="#cdd5e3">FP16</text>
+    <rect x="690" y="318" width="90" height="44" rx="7" fill="#1a1726" stroke="#8b5cf6"/><text x="735" y="345" fill="#cdd5e3">INT8</text>
+    <rect x="790" y="318" width="90" height="44" rx="7" fill="#16261c" stroke="#34d399"/><text x="835" y="345" fill="#7ee0a8">INT4</text>
+  </g>
+  <text x="1040" y="396" text-anchor="end" direction="rtl" font-size="11" fill="#9aa3b2">GPTQ · AWQ · FP8 · تكميم الـ KV — مقايضة الجودة مقابل الحجم/السرعة</text>
+
+  <text x="550" y="456" text-anchor="middle" direction="rtl" font-size="12.5" fill="#7ee0a8">الأدوات: vLLM · TensorRT-LLM · SGLang · llama.cpp — والمقاييس: TTFT · رموز/ثانية · التكلفة لكل مليون رمز</text>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 500" font-family="'Segoe UI',Tahoma,'Noto Kufi Arabic','Cairo',sans-serif">
+  <defs><marker id="al_a" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#6ea8fe"/></marker></defs>
+  <rect width="1100" height="500" fill="#0f1117"/>
+  <text x="550" y="40" text-anchor="middle" direction="rtl" font-size="24" font-weight="700" fill="#fff">ما بعد التدريب والمحاذاة — من نموذج أساسي إلى مساعد مفيد</text>
+  <text x="550" y="66" text-anchor="middle" font-size="13" fill="#9aa3b2">Base → SFT → (RLHF | DPO | GRPO/RLVR)</text>
+
+  <g text-anchor="middle" font-size="13">
+    <!-- base -->
+    <rect x="40" y="200" width="150" height="64" rx="11" fill="#171a23" stroke="#2a2f3e"/>
+    <text x="115" y="228" direction="rtl" fill="#e7e9ee">نموذج أساسي</text><text x="115" y="248" font-size="11" fill="#9aa3b2">Base (pretrained)</text>
+
+    <!-- SFT -->
+    <rect x="240" y="200" width="150" height="64" rx="11" fill="#172033" stroke="#6ea8fe"/>
+    <text x="315" y="222" direction="rtl" fill="#9fc1ff" font-weight="700">SFT</text>
+    <text x="315" y="242" font-size="10.5" fill="#9aa3b2">تعليمات + إخفاء</text>
+    <text x="315" y="256" font-size="10.5" fill="#9aa3b2">خسارة الموجّه</text>
+
+    <line x1="190" y1="232" x2="238" y2="232" stroke="#6ea8fe" stroke-width="2" marker-end="url(#al_a)"/>
+    <line x1="390" y1="232" x2="438" y2="232" stroke="#6ea8fe" stroke-width="2" marker-end="url(#al_a)"/>
+
+    <!-- three branches -->
+    <!-- RLHF -->
+    <rect x="440" y="100" width="290" height="80" rx="11" fill="#1a1118" stroke="#ff8a8a"/>
+    <text x="585" y="126" direction="rtl" fill="#ff9a9a" font-weight="700">RLHF (نموذج مكافأة + PPO)</text>
+    <text x="585" y="148" font-size="10.5" fill="#9aa3b2">قوي لكنه معقّد + عقوبة KL لمنع reward hacking</text>
+    <text x="585" y="166" font-size="10.5" fill="#fbbf24">يحتاج نموذج مكافأة منفصل</text>
+
+    <!-- DPO -->
+    <rect x="440" y="192" width="290" height="80" rx="11" fill="#16261c" stroke="#34d399"/>
+    <text x="585" y="218" direction="rtl" fill="#7ee0a8" font-weight="700">DPO ★ (تفضيل مباشر)</text>
+    <text x="585" y="240" font-size="10.5" fill="#9aa3b2">يتخطّى نموذج المكافأة — أزواج (مُفضّل/مرفوض)</text>
+    <text x="585" y="258" font-size="10.5" fill="#7ee0a8">أبسط وأكثر استقرارًا — الأنسب للفِرق الصغيرة</text>
+
+    <!-- GRPO/RLVR -->
+    <rect x="440" y="284" width="290" height="86" rx="11" fill="#15131f" stroke="#8b5cf6"/>
+    <text x="585" y="310" direction="rtl" fill="#b79bff" font-weight="700">GRPO + RLVR (الاستدلال)</text>
+    <text x="585" y="332" font-size="10.5" fill="#9aa3b2">أفضلية بمقارنة مجموعة — بلا شبكة قيمة</text>
+    <text x="585" y="350" font-size="10.5" fill="#9aa3b2">مكافأة من متحقّق آلي (رياضيات/كود)</text>
+    <text x="585" y="366" font-size="10.5" fill="#b79bff">→ استدلال طويل (Long-CoT) + «لحظة الأها»</text>
+
+    <line x1="395" y1="220" x2="430" y2="150" stroke="#6ea8fe" stroke-width="1.8" marker-end="url(#al_a)"/>
+    <line x1="395" y1="232" x2="436" y2="232" stroke="#6ea8fe" stroke-width="1.8" marker-end="url(#al_a)"/>
+    <line x1="395" y1="244" x2="430" y2="320" stroke="#6ea8fe" stroke-width="1.8" marker-end="url(#al_a)"/>
+
+    <!-- aligned -->
+    <rect x="800" y="192" width="160" height="80" rx="11" fill="#1a1726" stroke="#8b5cf6"/>
+    <text x="880" y="222" direction="rtl" fill="#b79bff" font-weight="700">نموذج مُحاذٍ</text>
+    <text x="880" y="244" font-size="10.5" fill="#9aa3b2">مفيد · آمن</text>
+    <text x="880" y="260" font-size="10.5" fill="#9aa3b2">مُستدِل</text>
+    <line x1="730" y1="150" x2="800" y2="210" stroke="#8b5cf6" stroke-width="1.6" marker-end="url(#al_a)"/>
+    <line x1="730" y1="232" x2="798" y2="232" stroke="#8b5cf6" stroke-width="1.6" marker-end="url(#al_a)"/>
+    <line x1="730" y1="320" x2="800" y2="254" stroke="#8b5cf6" stroke-width="1.6" marker-end="url(#al_a)"/>
+  </g>
+
+  <text x="1060" y="420" text-anchor="end" direction="rtl" font-size="12.5" fill="#9aa3b2">بدائل/تطوّرات: RLAIF · IPO · KTO · ORPO · rejection sampling/best-of-n · Constitutional AI</text>
+  <text x="1060" y="446" text-anchor="end" direction="rtl" font-size="12.5" fill="#fbbf24">الاستدلال يبدأ في mid-training لا فقط ما بعد التدريب (OLMo 3-Think)</text>
+</svg>
