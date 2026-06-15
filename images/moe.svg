@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" font-family="'Segoe UI',Tahoma,'Noto Kufi Arabic','Cairo',sans-serif">
+  <defs>
+    <marker id="a2" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#6ea8fe"/></marker>
+    <marker id="a2g" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#34d399"/></marker>
+  </defs>
+  <rect width="1000" height="560" fill="#0f1117"/>
+  <text x="500" y="42" text-anchor="middle" direction="rtl" font-size="25" font-weight="700" fill="#ffffff">خليط الخبراء (Mixture-of-Experts)</text>
+  <text x="500" y="70" text-anchor="middle" font-size="14" fill="#9aa3b2">يُفعَّل جزء صغير من الشبكة لكل رمز — أداء أعلى لكل معامل نشط</text>
+
+  <!-- token -->
+  <rect x="430" y="100" width="140" height="44" rx="10" fill="#171a23" stroke="#2a2f3e"/>
+  <text x="500" y="128" text-anchor="middle" direction="rtl" font-size="14" fill="#e7e9ee">رمز الدخل (token)</text>
+
+  <!-- router -->
+  <rect x="400" y="180" width="200" height="50" rx="10" fill="#1d2130" stroke="#6ea8fe"/>
+  <text x="500" y="202" text-anchor="middle" direction="rtl" font-size="14" font-weight="700" fill="#6ea8fe">البوّاب / الراوتر</text>
+  <text x="500" y="220" text-anchor="middle" font-size="11" fill="#9aa3b2">Router — يختار Top-K خبراء</text>
+  <line x1="500" y1="144" x2="500" y2="178" stroke="#6ea8fe" stroke-width="2" marker-end="url(#a2)"/>
+
+  <!-- experts row -->
+  <g font-size="12" text-anchor="middle">
+    <!-- 6 routed experts; 2 active (highlighted) -->
+    <rect x="40"  y="300" width="120" height="56" rx="10" fill="#141019" stroke="#2a2f3e"/><text x="100" y="333" fill="#5b6473">خبير 1</text>
+    <rect x="180" y="300" width="120" height="56" rx="10" fill="#16261c" stroke="#34d399"/><text x="240" y="328" fill="#7ee0a8" direction="rtl">خبير 2 ✓</text><text x="240" y="346" font-size="10" fill="#7ee0a8">نشط</text>
+    <rect x="320" y="300" width="120" height="56" rx="10" fill="#141019" stroke="#2a2f3e"/><text x="380" y="333" fill="#5b6473">خبير 3</text>
+    <rect x="460" y="300" width="120" height="56" rx="10" fill="#141019" stroke="#2a2f3e"/><text x="520" y="333" fill="#5b6473">خبير 4</text>
+    <rect x="600" y="300" width="120" height="56" rx="10" fill="#16261c" stroke="#34d399"/><text x="660" y="328" fill="#7ee0a8" direction="rtl">خبير 5 ✓</text><text x="660" y="346" font-size="10" fill="#7ee0a8">نشط</text>
+    <rect x="740" y="300" width="120" height="56" rx="10" fill="#141019" stroke="#2a2f3e"/><text x="800" y="333" fill="#5b6473">خبير N…</text>
+  </g>
+  <!-- routing lines -->
+  <g stroke-width="1.4" fill="none">
+    <line x1="470" y1="230" x2="100" y2="298" stroke="#2a2f3e"/>
+    <line x1="478" y1="230" x2="240" y2="298" stroke="#34d399" stroke-width="2.4" marker-end="url(#a2g)"/>
+    <line x1="490" y1="230" x2="380" y2="298" stroke="#2a2f3e"/>
+    <line x1="510" y1="230" x2="520" y2="298" stroke="#2a2f3e"/>
+    <line x1="522" y1="230" x2="660" y2="298" stroke="#34d399" stroke-width="2.4" marker-end="url(#a2g)"/>
+    <line x1="530" y1="230" x2="800" y2="298" stroke="#2a2f3e"/>
+  </g>
+
+  <!-- shared expert -->
+  <rect x="360" y="410" width="280" height="56" rx="10" fill="#1a1726" stroke="#8b5cf6"/>
+  <text x="500" y="434" text-anchor="middle" direction="rtl" font-size="13" font-weight="700" fill="#b79bff">خبير مشترك (Shared) — يعمل دائمًا</text>
+  <text x="500" y="452" text-anchor="middle" font-size="10.5" fill="#9aa3b2">يلتقط المعرفة العامة المشتركة بين كل الرموز</text>
+
+  <!-- combine -->
+  <line x1="240" y1="356" x2="470" y2="500" stroke="#34d399" stroke-width="1.6" marker-end="url(#a2g)"/>
+  <line x1="660" y1="356" x2="530" y2="500" stroke="#34d399" stroke-width="1.6" marker-end="url(#a2g)"/>
+  <line x1="500" y1="466" x2="500" y2="500" stroke="#8b5cf6" stroke-width="1.6"/>
+  <rect x="410" y="502" width="180" height="44" rx="10" fill="#171a23" stroke="#2a2f3e"/>
+  <text x="500" y="530" text-anchor="middle" direction="rtl" font-size="13" fill="#e7e9ee">جمع موزون → الخرج</text>
+
+  <text x="960" y="150" text-anchor="end" direction="rtl" font-size="13" fill="#cdd5e3">مثال DeepSeekMoE: 256 خبيرًا، يُفعَّل 8 لكل رمز</text>
+  <text x="960" y="174" text-anchor="end" direction="rtl" font-size="13" fill="#9aa3b2">671B إجمالي → 37B نشط فقط لكل رمز</text>
+  <text x="40" y="150" direction="rtl" font-size="13" fill="#cdd5e3">موازنة بلا خسارة مساعدة</text>
+  <text x="40" y="174" direction="rtl" font-size="12" fill="#9aa3b2">(auxiliary-loss-free)</text>
+</svg>

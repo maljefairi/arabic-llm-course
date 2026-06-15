@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" font-family="'Segoe UI',Tahoma,'Noto Kufi Arabic','Cairo',sans-serif">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6ea8fe"/><stop offset="1" stop-color="#5a8de0"/></linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#7a4ce0"/></linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#2bb583"/></linearGradient>
+  </defs>
+  <rect width="1200" height="520" fill="#0f1117"/>
+  <text x="600" y="42" text-anchor="middle" direction="rtl" font-size="25" font-weight="700" fill="#ffffff">المنهج المرحلي للتدريب المسبق — حيث يُبنى التخصّص فعليًا</text>
+  <text x="600" y="70" text-anchor="middle" font-size="14" fill="#9aa3b2">Staged Pretraining · Mid-training · Annealing (أعلى عائد لكل رمز)</text>
+
+  <!-- stage bars (RTL conceptual: stage1 widest) -->
+  <g>
+    <rect x="60" y="110" width="640" height="70" rx="10" fill="url(#g1)"/>
+    <text x="380" y="142" text-anchor="middle" direction="rtl" font-size="16" font-weight="700" fill="#06101f">المرحلة 1: تدريب عام واسع</text>
+    <text x="380" y="165" text-anchor="middle" font-size="12" fill="#0b1830">ويب + كود + رياضيات مُصفّاة · مثال: 6–30T رمز · معظم الـ FLOPs</text>
+
+    <rect x="720" y="110" width="320" height="70" rx="10" fill="url(#g2)"/>
+    <text x="880" y="142" text-anchor="middle" direction="rtl" font-size="15" font-weight="700" fill="#0c0820">المرحلة 2: تدريب وسيط</text>
+    <text x="880" y="165" text-anchor="middle" font-size="11.5" fill="#160f33">يرفع وزن مجالك + استدلال · ~100B رمز</text>
+
+    <rect x="1060" y="110" width="90" height="70" rx="10" fill="url(#g3)"/>
+    <text x="1105" y="138" text-anchor="middle" direction="rtl" font-size="12.5" font-weight="700" fill="#05140d">تلدين</text>
+    <text x="1105" y="156" text-anchor="middle" font-size="10" fill="#0a2418">~1T</text>
+    <text x="1105" y="170" text-anchor="middle" font-size="9.5" fill="#0a2418">أفضل بياناتك</text>
+  </g>
+
+  <!-- learning-rate curve (WSD) -->
+  <g>
+    <text x="600" y="250" text-anchor="middle" direction="rtl" font-size="14" fill="#cdd5e3">جدول معدّل التعلّم: Warmup-Stable-Decay (WSD)</text>
+    <!-- axes -->
+    <line x1="60" y1="430" x2="1150" y2="430" stroke="#2a2f3e" stroke-width="1.5"/>
+    <line x1="60" y1="280" x2="60" y2="430" stroke="#2a2f3e" stroke-width="1.5"/>
+    <text x="45" y="290" text-anchor="end" font-size="11" fill="#9aa3b2">LR</text>
+    <text x="1150" y="450" text-anchor="end" font-size="11" fill="#9aa3b2">الزمن →</text>
+    <!-- curve: warmup up, long stable, fast decay -->
+    <path d="M60,425 L130,300 L1060,300 L1150,418" fill="none" stroke="#fbbf24" stroke-width="3"/>
+    <!-- phase shading under decay -->
+    <path d="M1060,300 L1150,418 L1150,430 L1060,430 Z" fill="#34d399" opacity="0.18"/>
+    <text x="100" y="335" font-size="11" fill="#fbbf24" direction="rtl">إحماء</text>
+    <text x="560" y="290" font-size="11" fill="#fbbf24" direction="rtl">استقرار طويل</text>
+    <text x="1095" y="350" text-anchor="middle" font-size="10.5" fill="#34d399" direction="rtl">انحلال سريع</text>
+  </g>
+
+  <!-- annealing callout -->
+  <rect x="60" y="462" width="1090" height="44" rx="10" fill="#12151d" stroke="#34d399"/>
+  <text x="1130" y="482" text-anchor="end" direction="rtl" font-size="13" font-weight="700" fill="#7ee0a8">حيلة التلدين:</text>
+  <text x="1015" y="482" text-anchor="end" direction="rtl" font-size="12.5" fill="#cdd5e3">خلال الانحلال السريع، البيانات عالية الجودة والمجالية لها تأثير مضخّم — هنا يتحوّل «العام» إلى «متخصّص» دون أي ضبط دقيق.</text>
+  <text x="1130" y="500" text-anchor="end" direction="rtl" font-size="11.5" fill="#9aa3b2">تحذير (Luo 2025): الترتيب التصاعدي + انحلال LR قد يُهدر أفضل بياناتك — استخدم انحلالًا معتدلًا أو متوسّط النماذج.</text>
+</svg>

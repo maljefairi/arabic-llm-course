@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" font-family="'Segoe UI',Tahoma,'Noto Kufi Arabic','Cairo',sans-serif">
+  <rect width="1200" height="520" fill="#0f1117"/>
+  <text x="600" y="42" text-anchor="middle" direction="rtl" font-size="25" font-weight="700" fill="#ffffff">تطوّر آليات الانتباه وكفاءة ذاكرة الـ KV cache</text>
+  <text x="600" y="70" text-anchor="middle" font-size="14" fill="#9aa3b2">MHA → MQA → GQA → MLA  ·  أقل ذاكرة = استدلال أرخص وأطول سياقًا</text>
+
+  <!-- 4 panels -->
+  <g text-anchor="middle">
+    <!-- helper: query heads (top), kv heads (bottom) -->
+    <!-- MHA -->
+    <rect x="30" y="110" width="265" height="300" rx="14" fill="#141019" stroke="#2a2f3e"/>
+    <text x="162" y="140" direction="rtl" font-size="17" font-weight="700" fill="#ff7a7a">MHA — متعدد الرؤوس</text>
+    <g fill="#6ea8fe"><rect x="60" y="170" width="30" height="30" rx="5"/><rect x="105" y="170" width="30" height="30" rx="5"/><rect x="150" y="170" width="30" height="30" rx="5"/><rect x="195" y="170" width="30" height="30" rx="5"/></g>
+    <g fill="#ff8a8a"><rect x="60" y="300" width="30" height="30" rx="5"/><rect x="105" y="300" width="30" height="30" rx="5"/><rect x="150" y="300" width="30" height="30" rx="5"/><rect x="195" y="300" width="30" height="30" rx="5"/></g>
+    <g stroke="#3a4150" stroke-width="1.4"><line x1="75" y1="200" x2="75" y2="300"/><line x1="120" y1="200" x2="120" y2="300"/><line x1="165" y1="200" x2="165" y2="300"/><line x1="210" y1="200" x2="210" y2="300"/></g>
+    <text x="162" y="360" font-size="12" fill="#9aa3b2">كل رأس له K/V خاص</text>
+    <text x="162" y="392" font-size="13" fill="#ff7a7a">ذاكرة KV: ●●●● (الأعلى)</text>
+
+    <!-- MQA -->
+    <rect x="315" y="110" width="265" height="300" rx="14" fill="#141019" stroke="#2a2f3e"/>
+    <text x="447" y="140" direction="rtl" font-size="17" font-weight="700" fill="#ffc46b">MQA — استعلام متعدد</text>
+    <g fill="#6ea8fe"><rect x="345" y="170" width="30" height="30" rx="5"/><rect x="390" y="170" width="30" height="30" rx="5"/><rect x="435" y="170" width="30" height="30" rx="5"/><rect x="480" y="170" width="30" height="30" rx="5"/></g>
+    <g fill="#ffc46b"><rect x="432" y="300" width="30" height="30" rx="5"/></g>
+    <g stroke="#3a4150" stroke-width="1.4"><line x1="360" y1="200" x2="447" y2="300"/><line x1="405" y1="200" x2="447" y2="300"/><line x1="450" y1="200" x2="447" y2="300"/><line x1="495" y1="200" x2="447" y2="300"/></g>
+    <text x="447" y="360" font-size="12" fill="#9aa3b2">رأس K/V واحد مشترك</text>
+    <text x="447" y="392" font-size="13" fill="#ffc46b">ذاكرة KV: ● (الأدنى، جودة أقل)</text>
+
+    <!-- GQA -->
+    <rect x="600" y="110" width="265" height="300" rx="14" fill="#141019" stroke="#2a2f3e"/>
+    <text x="732" y="140" direction="rtl" font-size="17" font-weight="700" fill="#7ee0a8">GQA — مجمّع</text>
+    <g fill="#6ea8fe"><rect x="630" y="170" width="30" height="30" rx="5"/><rect x="675" y="170" width="30" height="30" rx="5"/><rect x="720" y="170" width="30" height="30" rx="5"/><rect x="765" y="170" width="30" height="30" rx="5"/></g>
+    <g fill="#7ee0a8"><rect x="660" y="300" width="30" height="30" rx="5"/><rect x="735" y="300" width="30" height="30" rx="5"/></g>
+    <g stroke="#3a4150" stroke-width="1.4"><line x1="645" y1="200" x2="675" y2="300"/><line x1="690" y1="200" x2="675" y2="300"/><line x1="735" y1="200" x2="750" y2="300"/><line x1="780" y1="200" x2="750" y2="300"/></g>
+    <text x="732" y="360" font-size="12" fill="#9aa3b2">مجموعات تتشارك K/V</text>
+    <text x="732" y="392" font-size="13" fill="#7ee0a8">ذاكرة KV: ●● (التوازن الآمن)</text>
+
+    <!-- MLA -->
+    <rect x="885" y="110" width="285" height="300" rx="14" fill="#15131f" stroke="#8b5cf6"/>
+    <text x="1027" y="140" direction="rtl" font-size="17" font-weight="700" fill="#b79bff">MLA — كامن منخفض الرتبة ★</text>
+    <g fill="#6ea8fe"><rect x="915" y="170" width="30" height="30" rx="5"/><rect x="960" y="170" width="30" height="30" rx="5"/><rect x="1005" y="170" width="30" height="30" rx="5"/><rect x="1050" y="170" width="30" height="30" rx="5"/><rect x="1095" y="170" width="30" height="30" rx="5"/></g>
+    <rect x="975" y="295" width="100" height="34" rx="8" fill="#8b5cf6"/>
+    <text x="1025" y="318" font-size="12" fill="#fff">latent c</text>
+    <g stroke="#6a4fd0" stroke-width="1.4"><line x1="930" y1="200" x2="1025" y2="295"/><line x1="975" y1="200" x2="1025" y2="295"/><line x1="1020" y1="200" x2="1025" y2="295"/><line x1="1065" y1="200" x2="1025" y2="295"/><line x1="1110" y1="200" x2="1025" y2="295"/></g>
+    <text x="1027" y="360" font-size="12" fill="#9aa3b2">يُخزَّن متجه كامن مضغوط فقط</text>
+    <text x="1027" y="392" font-size="13" fill="#b79bff">ذاكرة KV: ◐ (أصغر + جودة أعلى)</text>
+  </g>
+
+  <text x="1170" y="450" text-anchor="end" direction="rtl" font-size="14" fill="#cdd5e3">التوصية: استخدم <tspan fill="#b79bff" font-weight="700">MLA</tspan> (DeepSeek-V2/V3) إن أمكن تنفيذها، وإلا فـ <tspan fill="#7ee0a8" font-weight="700">GQA</tspan> كخط أساس آمن.</text>
+  <text x="1170" y="478" text-anchor="end" direction="rtl" font-size="13" fill="#9aa3b2">الضغط منخفض الرتبة يسمح للرؤوس باستخدام نفس المعلومة بطرق مختلفة، بخلاف إجبار GQA الرؤوس على التطابق.</text>
+</svg>
